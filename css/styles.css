@@ -732,3 +732,9 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  .store-badge .icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
