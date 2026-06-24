@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — PrepGeni</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#0A0B0F; --surface:#12141A; --border:rgba(245,244,240,0.08);
+    --paper:#F5F4F0; --paper-muted:#A6A8AE; --paper-faint:#6E7178;
+    --electric:#4AE8A0; --volt:#D4FF47;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'DM Sans',sans-serif; background:var(--ink); color:var(--paper); line-height:1.7; }
+  .container { max-width:760px; margin:0 auto; padding:60px 24px 100px; }
+  nav { background:rgba(10,11,15,0.8); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); padding:16px 24px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; }
+  .logo { display:flex; align-items:center; gap:10px; font-family:'Sora',sans-serif; font-weight:800; font-size:18px; text-decoration:none; color:var(--paper); }
+  .logo-mark { width:30px; height:30px; border-radius:8px; background:linear-gradient(135deg,var(--electric),#2dd68a); display:flex; align-items:center; justify-content:center; font-size:14px; }
+  .logo span.accent { color:var(--electric); }
+  .nav-back { font-size:13px; color:var(--paper-faint); text-decoration:none; }
+  .nav-back:hover { color:var(--electric); }
+  h1 { font-family:'Sora',sans-serif; font-weight:800; font-size:40px; margin-bottom:20px; letter-spacing:-0.02em; line-height:1.1; }
+  h2 { font-family:'Sora',sans-serif; font-weight:700; font-size:22px; margin:36px 0 12px; }
+  p { color:var(--paper-muted); font-size:15px; margin-bottom:16px; }
+  a { color:var(--electric); text-decoration:none; }
+  .lead { font-size:18px; color:var(--paper-muted); margin-bottom:40px; line-height:1.7; }
+  .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:32px 0; }
+  .stat { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px 16px; text-align:center; }
+  .stat strong { display:block; font-family:'Sora',sans-serif; font-size:26px; font-weight:800; color:var(--electric); margin-bottom:4px; }
+  .stat span { font-size:12px; color:var(--paper-faint); }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:24px; margin:24px 0; }
+  .exams { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+  .exam-badge { background:rgba(74,232,160,0.1); border:1px solid rgba(74,232,160,0.25); border-radius:100px; padding:6px 16px; font-size:13px; font-weight:600; color:var(--electric); }
+  .coming { background:rgba(139,92,246,0.1); border:1px solid rgba(139,92,246,0.25); color:#c4b5fd; }
+  @media(max-width:600px) { .stats { grid-template-columns:repeat(2,1fr); } h1 { font-size:30px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">⚡</div>
+    Prep<span class="accent">Geni</span>
+  </a>
+  <a href="/" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="container">
+
+  <h1>About PrepGeni</h1>
+  <p class="lead">
+    We're building the most effective exam prep platform for African students —
+    starting with Nigeria's WAEC, JAMB, NECO and GCE.
+  </p>
+
+  <p>
+    PrepGeni was built by a solo technical founder who grew up watching brilliant
+    Nigerian students fail major exams — not because they lacked ability, but because
+    they lacked access to quality, curriculum-accurate preparation tools.
+  </p>
+
+  <p>
+    The existing options are photocopied past question booklets, YouTube videos with
+    no interactivity, and generic quiz apps that don't understand the Nigerian curriculum.
+    PrepGeni changes that — combining 15,250+ real exam questions with AI explanations,
+    adaptive difficulty, and competitive features that make studying something students
+    actually look forward to.
+  </p>
+
+  <div class="stats">
+    <div class="stat"><strong>15,250+</strong><span>Practice questions</span></div>
+    <div class="stat"><strong>4</strong><span>Exams covered</span></div>
+    <div class="stat"><strong>16</strong><span>Achievement badges</span></div>
+    <div class="stat"><strong>24/7</strong><span>AI tutor</span></div>
+  </div>
+
+  <h2>Our Mission</h2>
+  <p>
+    To give every African student access to world-class, personalized exam preparation —
+    powered by AI, grounded in real curricula, and designed for how students actually study:
+    competitively, socially, and on mobile.
+  </p>
+
+  <h2>Exams We Cover</h2>
+  <div class="exams">
+    <span class="exam-badge">🇳🇬 WAEC</span>
+    <span class="exam-badge">🇳🇬 JAMB / UTME</span>
+    <span class="exam-badge">🇳🇬 NECO</span>
+    <span class="exam-badge">🇳🇬 GCE</span>
+    <span class="exam-badge coming">🇬🇭 BECE — coming soon</span>
+    <span class="exam-badge coming">🇰🇪 KCSE — coming soon</span>
+    <span class="exam-badge coming">🇿🇦 NSC — coming soon</span>
+    <span class="exam-badge coming">🇺🇬 UACE — coming soon</span>
+  </div>
+
+  <h2>What Makes PrepGeni Different</h2>
+  <p>
+    Most exam prep apps are just question banks. PrepGeni is a learning system.
+    The app tracks your accuracy per subject in real time and automatically adjusts
+    question difficulty so you're always improving, never wasting time on questions
+    you've already mastered.
+  </p>
+  <p>
+    The AI Tutor (powered by Google Gemini) gives instant explanations in plain language —
+    not textbook jargon. The 1v1 Duel feature exists because Nigerian students are
+    intensely competitive and learn better under pressure. Every feature was designed
+    around how students in this context actually study.
+  </p>
+
+  <div class="card">
+    <p style="margin-bottom:0; color:var(--paper);">
+      Have questions, want to partner with us, or interested in school dashboards?
+      <a href="/contact">Get in touch →</a>
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

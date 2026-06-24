@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — PrepGeni</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#0A0B0F; --surface:#12141A; --surface-2:#161922;
+    --border:rgba(245,244,240,0.08); --border-mid:rgba(245,244,240,0.14);
+    --paper:#F5F4F0; --paper-muted:#A6A8AE; --paper-faint:#6E7178;
+    --electric:#4AE8A0;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'DM Sans',sans-serif; background:var(--ink); color:var(--paper); line-height:1.7; }
+  nav { background:rgba(10,11,15,0.8); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); padding:16px 24px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; }
+  .logo { display:flex; align-items:center; gap:10px; font-family:'Sora',sans-serif; font-weight:800; font-size:18px; text-decoration:none; color:var(--paper); }
+  .logo-mark { width:30px; height:30px; border-radius:8px; background:linear-gradient(135deg,var(--electric),#2dd68a); display:flex; align-items:center; justify-content:center; font-size:14px; }
+  .logo span.accent { color:var(--electric); }
+  .nav-back { font-size:13px; color:var(--paper-faint); text-decoration:none; }
+  .nav-back:hover { color:var(--electric); }
+  .container { max-width:600px; margin:0 auto; padding:60px 24px 100px; }
+  h1 { font-family:'Sora',sans-serif; font-weight:800; font-size:40px; margin-bottom:12px; letter-spacing:-0.02em; }
+  p.lead { color:var(--paper-muted); font-size:16px; margin-bottom:36px; }
+  a { color:var(--electric); text-decoration:none; }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:24px; margin-bottom:32px; }
+  .direct { display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid var(--border); }
+  .direct:last-child { border-bottom:none; }
+  .direct .ic { width:40px; height:40px; border-radius:10px; background:rgba(74,232,160,0.08); display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+  .direct strong { display:block; font-size:14px; color:var(--paper); margin-bottom:2px; }
+  .direct a, .direct span { color:var(--paper-muted); font-size:13px; }
+  .direct a:hover { color:var(--electric); }
+  form { display:flex; flex-direction:column; gap:16px; }
+  .form-label { font-size:13px; color:var(--paper-muted); margin-bottom:-10px; font-weight:500; }
+  input, textarea, select {
+    background:var(--surface-2); border:1px solid var(--border-mid);
+    border-radius:12px; padding:13px 16px; color:var(--paper);
+    font-family:inherit; font-size:14px; outline:none; width:100%;
+  }
+  input:focus, textarea:focus, select:focus { border-color:rgba(74,232,160,0.4); }
+  select option { background:var(--surface-2); }
+  textarea { resize:vertical; min-height:120px; }
+  button {
+    background:linear-gradient(135deg,var(--electric),#2dd68a);
+    color:#0A0B0F; border:none; border-radius:100px; padding:15px;
+    font-weight:700; font-size:15px; font-family:inherit; cursor:pointer;
+    transition:opacity 0.15s;
+  }
+  button:hover { opacity:0.9; }
+  button:disabled { opacity:0.6; cursor:not-allowed; }
+  .success { display:none; background:rgba(74,232,160,0.1); border:1px solid rgba(74,232,160,0.25); border-radius:12px; padding:16px; text-align:center; color:var(--electric); font-weight:600; font-size:15px; margin-top:8px; }
+  @media(max-width:600px) { h1 { font-size:30px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">⚡</div>
+    Prep<span class="accent">Geni</span>
+  </a>
+  <a href="/" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="container">
+
+  <h1>Contact Us</h1>
+  <p class="lead">Questions, feedback, bug reports, or school partnership inquiries — we'd love to hear from you.</p>
+
+  <div class="card">
+    <div class="direct">
+      <div class="ic">✉️</div>
+      <div>
+        <strong>Email</strong>
+        <a href="mailto:support@prepgeni.com">support@prepgeni.com</a>
+      </div>
+    </div>
+    <div class="direct">
+      <div class="ic">🌐</div>
+      <div>
+        <strong>Website</strong>
+        <a href="https://prepgeni.com">prepgeni.com</a>
+      </div>
+    </div>
+    <div class="direct">
+      <div class="ic">📍</div>
+      <div>
+        <strong>Based in</strong>
+        <span>Lagos, Nigeria 🇳🇬</span>
+      </div>
+    </div>
+  </div>
+
+  <form id="contactForm" action="https://formsubmit.co/support@prepgeni.com" method="POST">
+    <!-- FormSubmit config -->
+    <input type="hidden" name="_subject" value="PrepGeni Contact Form">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+
+    <span class="form-label">Your Name</span>
+    <input type="text" name="name" placeholder="Tunde Adebayo" required />
+
+    <span class="form-label">Your Email</span>
+    <input type="email" name="email" placeholder="you@example.com" required />
+
+    <span class="form-label">Subject</span>
+    <select name="subject">
+      <option>General Feedback</option>
+      <option>Bug Report</option>
+      <option>School / Partnership Inquiry</option>
+      <option>Account Issue</option>
+      <option>Press / Media</option>
+      <option>Other</option>
+    </select>
+
+    <span class="form-label">Message</span>
+    <textarea name="message" placeholder="How can we help?" required></textarea>
+
+    <button type="submit" id="submitBtn">Send Message →</button>
+    <div class="success" id="formSuccess">🎉 Message sent! We'll get back to you within 24 hours.</div>
+  </form>
+
+</div>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = document.getElementById('submitBtn');
+    const success = document.getElementById('formSuccess');
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    fetch('https://formsubmit.co/ajax/support@prepgeni.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value,
+      }),
+    })
+    .then(() => {
+      form.style.display = 'none';
+      success.style.display = 'block';
+    })
+    .catch(() => {
+      btn.disabled = false;
+      btn.textContent = 'Send Message →';
+      alert('Something went wrong. Please email us directly at support@prepgeni.com');
+    });
+  });
+</script>
+</body>
+</html>

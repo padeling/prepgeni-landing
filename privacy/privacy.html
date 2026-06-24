@@ -9,45 +9,45 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #0A0B0F;
-    --surface: #12141A;
-    --border: rgba(245,244,240,0.08);
-    --paper: #F5F4F0;
-    --paper-muted: #A6A8AE;
-    --paper-faint: #6E7178;
-    --electric: #4AE8A0;
+    --ink:#0A0B0F; --surface:#12141A; --border:rgba(245,244,240,0.08);
+    --paper:#F5F4F0; --paper-muted:#A6A8AE; --paper-faint:#6E7178;
+    --electric:#4AE8A0;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--ink);
-    color: var(--paper);
-    line-height: 1.7;
-  }
-  .container { max-width: 760px; margin: 0 auto; padding: 60px 24px 100px; }
-  .logo { display:flex; align-items:center; gap:10px; font-family:'Sora',sans-serif; font-weight:800; font-size:20px; margin-bottom:40px; }
-  .logo-mark { width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg,var(--electric),#2dd68a); display:flex; align-items:center; justify-content:center; font-size:16px; }
-  .logo span.accent { color: var(--electric); }
-  h1 { font-family:'Sora',sans-serif; font-weight:800; font-size:36px; margin-bottom:8px; letter-spacing:-0.02em; }
-  .updated { color: var(--paper-faint); font-size:13px; margin-bottom:40px; }
-  h2 { font-family:'Sora',sans-serif; font-weight:700; font-size:20px; margin: 36px 0 12px; }
-  p, li { color: var(--paper-muted); font-size:15px; margin-bottom:12px; }
-  ul { padding-left:20px; margin-bottom:12px; }
-  a { color: var(--electric); text-decoration:none; }
-  .card { background: var(--surface); border:1px solid var(--border); border-radius:16px; padding:24px; margin: 24px 0; }
-  .back { display:inline-block; margin-top:48px; color: var(--paper-faint); font-size:14px; }
+  body { font-family:'DM Sans',sans-serif; background:var(--ink); color:var(--paper); line-height:1.7; }
+  nav { background:rgba(10,11,15,0.8); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); padding:16px 24px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; }
+  .logo { display:flex; align-items:center; gap:10px; font-family:'Sora',sans-serif; font-weight:800; font-size:18px; text-decoration:none; color:var(--paper); }
+  .logo-mark { width:30px; height:30px; border-radius:8px; background:linear-gradient(135deg,var(--electric),#2dd68a); display:flex; align-items:center; justify-content:center; font-size:14px; }
+  .logo span.accent { color:var(--electric); }
+  .nav-back { font-size:13px; color:var(--paper-faint); text-decoration:none; }
+  .nav-back:hover { color:var(--electric); }
+  .container { max-width:760px; margin:0 auto; padding:60px 24px 100px; }
+  h1 { font-family:'Sora',sans-serif; font-weight:800; font-size:40px; margin-bottom:8px; letter-spacing:-0.02em; }
+  .updated { color:var(--paper-faint); font-size:13px; margin-bottom:36px; padding-bottom:36px; border-bottom:1px solid var(--border); }
+  h2 { font-family:'Sora',sans-serif; font-weight:700; font-size:20px; margin:36px 0 12px; color:var(--paper); }
+  p, li { color:var(--paper-muted); font-size:15px; margin-bottom:12px; }
+  ul { padding-left:20px; margin-bottom:16px; }
+  li { margin-bottom:8px; }
+  strong { color:var(--paper); }
+  a { color:var(--electric); text-decoration:none; }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:24px; margin:24px 0; }
+  @media(max-width:600px) { h1 { font-size:30px; } }
 </style>
 </head>
 <body>
-<div class="container">
 
-  <div class="logo">
+<nav>
+  <a href="/" class="logo">
     <div class="logo-mark">⚡</div>
     Prep<span class="accent">Geni</span>
-  </div>
+  </a>
+  <a href="/" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="container">
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: June 13, 2026</p>
+  <p class="updated">Last updated: June 23, 2026</p>
 
   <p>
     PrepGeni ("we", "our", "us") provides an AI-powered exam preparation
@@ -59,11 +59,12 @@
   <h2>1. Information We Collect</h2>
   <p>When you create an account and use PrepGeni, we collect:</p>
   <ul>
-    <li><strong>Account information:</strong> your name, email address, and password (handled securely via our authentication provider, Supabase).</li>
-    <li><strong>Profile information:</strong> your selected exam (WAEC, JAMB, NECO, GCE), subjects, country, and study preferences.</li>
-    <li><strong>Usage data:</strong> quiz attempts, scores, accuracy, streaks, XP, duel results, and AI tutor interactions, used to personalize your learning experience.</li>
-    <li><strong>Analytics data:</strong> app usage events (e.g. screens viewed, sessions started/completed) collected via PostHog to help us understand how the app is used and improve it.</li>
-    <li><strong>Device information:</strong> basic technical data such as device type and operating system, used for troubleshooting and compatibility.</li>
+    <li><strong>Account information:</strong> your name, email address, and password (handled securely via Supabase authentication).</li>
+    <li><strong>Profile information:</strong> your selected exam, subjects, country, and study preferences.</li>
+    <li><strong>Usage data:</strong> quiz attempts, scores, accuracy, streaks, XP, duel results, and AI tutor interactions — used to personalize your learning experience.</li>
+    <li><strong>Analytics data:</strong> app usage events (screens viewed, sessions started/completed) collected via PostHog to help us improve the product.</li>
+    <li><strong>Device information:</strong> basic technical data such as device type and operating system, used for troubleshooting.</li>
+    <li><strong>Payment information:</strong> subscription purchases are processed by Google Play Billing. We do not store card details — only subscription status and expiry.</li>
   </ul>
 
   <h2>2. How We Use Your Information</h2>
@@ -73,6 +74,7 @@
     <li>To maintain leaderboards and gamification features (XP, streaks, achievements).</li>
     <li>To analyze app usage and improve features, performance, and reliability.</li>
     <li>To communicate with you about your account, such as email verification codes.</li>
+    <li>To process and verify subscription purchases.</li>
   </ul>
 
   <h2>3. AI Features</h2>
@@ -87,9 +89,10 @@
   <h2>4. Data Sharing</h2>
   <p>We do not sell your personal information. We share data only with:</p>
   <ul>
-    <li><strong>Supabase</strong> — our backend database and authentication provider, which stores your account and app data securely.</li>
+    <li><strong>Supabase</strong> — our backend database and authentication provider.</li>
     <li><strong>Google (Gemini AI)</strong> — to generate AI explanations and tutor responses.</li>
-    <li><strong>PostHog</strong> — for anonymized/aggregated product analytics.</li>
+    <li><strong>Google Play Billing</strong> — to process subscription payments.</li>
+    <li><strong>PostHog</strong> — for anonymized product analytics.</li>
   </ul>
   <p>We do not share your data with advertisers or third parties for marketing purposes.</p>
 
@@ -97,23 +100,22 @@
   <p>
     Your data is protected using industry-standard security practices,
     including encrypted connections (HTTPS) and Row Level Security (RLS)
-    on our database, which ensures users can only access their own data.
+    on our database, ensuring users can only access their own data.
   </p>
 
   <h2>6. Data Retention</h2>
   <p>
     We retain your account and usage data for as long as your account
     is active. You may request deletion of your account and associated
-    data at any time by contacting us (see Section 9).
+    data at any time by contacting us.
   </p>
 
   <h2>7. Children's Privacy</h2>
   <p>
-    PrepGeni is designed for secondary school students. We do not knowingly
-    collect personal information from children under 13 without appropriate
-    parental or guardian consent where required by applicable law. If you
-    believe a child has provided us personal information without consent,
-    please contact us so we can remove it.
+    PrepGeni is designed for secondary school students aged 13 and above.
+    We do not knowingly collect personal information from children under 13
+    without appropriate parental or guardian consent where required by
+    applicable law.
   </p>
 
   <h2>8. Your Rights</h2>
@@ -126,8 +128,9 @@
 
   <h2>9. Contact Us</h2>
   <div class="card">
-    <p style="margin-bottom:4px;">For privacy questions, data access, or deletion requests:</p>
-    <p style="margin-bottom:0;"><strong style="color:var(--paper)">Email:</strong> <a href="mailto:support@prepgeni.com">support@prepgeni.com</a></p>
+    <p style="margin-bottom:4px; color:var(--paper);">For privacy questions, data access, or deletion requests:</p>
+    <p style="margin-bottom:0;"><strong>Email:</strong> <a href="mailto:support@prepgeni.com">support@prepgeni.com</a></p>
+    <p style="margin-bottom:0;"><strong>Website:</strong> <a href="https://prepgeni.com/contact">prepgeni.com/contact</a></p>
   </div>
 
   <h2>10. Changes to This Policy</h2>
@@ -137,8 +140,6 @@
     this page. Continued use of PrepGeni after changes constitutes
     acceptance of the updated policy.
   </p>
-
-  <a href="/" class="back">← Back to PrepGeni</a>
 
 </div>
 </body>
